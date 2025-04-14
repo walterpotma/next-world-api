@@ -1,30 +1,33 @@
-# Acesse https://aka.ms/customizecontainer para saber como personalizar seu contêiner de depuração e como o Visual Studio usa este Dockerfile para criar suas imagens para uma depuração mais rápida.
-
-# Esta fase é usada durante a execução no VS no modo rápido (Padrão para a configuração de Depuração)
+# Acesse https://aka.ms/customizecontainer para saber como personalizar seu contêiner de depuração
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
-
-# Esta fase é usada para compilar o projeto de serviço
+# Fase de build
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
-WORKDIR /src
-WORKDIR /src
-COPY ["next-world-api.csproj", "./"]
-RUN dotnet restore "next-world-api.csproj"
-COPY . .
-WORKDIR "/src/next-world-api"
-RUN dotnet build "./next-world-api.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
-# Esta fase é usada para publicar o projeto de serviço a ser copiado para a fase final
+# Configuração do workspace
+WORKDIR /src
+
+# Copia apenas o arquivo de projeto e restaura as dependências
+COPY ["next-world-api.csproj", "."]
+RUN dotnet restore "next-world-api.csproj"
+
+# Copia todo o restante do código
+COPY . .
+
+# Build do projeto
+RUN dotnet build "next-world-api.csproj" -c $BUILD_CONFIGURATION -o /app/build
+
+# Fase de publicação
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./next-world-api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "next-world-api.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
-# Esta fase é usada na produção ou quando executada no VS no modo normal (padrão quando não está usando a configuração de Depuração)
+# Fase final
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
