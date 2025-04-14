@@ -1,0 +1,6 @@
+@next_world_api_HostAddress = http://localhost:5147
+
+GET {{next_world_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
