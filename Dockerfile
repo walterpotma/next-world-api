@@ -12,8 +12,9 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["next-world-api/next-world-api.csproj", "next-world-api/"]
-RUN dotnet restore "./next-world-api/next-world-api.csproj"
+WORKDIR /src
+COPY ["next-world-api.csproj", "./"]
+RUN dotnet restore "next-world-api.csproj"
 COPY . .
 WORKDIR "/src/next-world-api"
 RUN dotnet build "./next-world-api.csproj" -c $BUILD_CONFIGURATION -o /app/build
