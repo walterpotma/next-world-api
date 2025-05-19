@@ -14,5 +14,6 @@ namespace next_world_api.Model
         public string? senha { get; set; }
 
         public string? acesso { get; set; }
+        //niveis de acesso, master, produtora, autor, leitor
     }
 }

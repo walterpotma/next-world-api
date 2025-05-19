@@ -1,6 +1,38 @@
 [
   {
     "ContainingType": "next_world_api.Controllers.ContasController",
+    "Method": "AddConta",
+    "RelativePath": "api/Contas/AddConta",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newConta",
+        "Type": "next_world_api.Model.Contas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "next_world_api.Controllers.ContasController",
+    "Method": "DeleteConta",
+    "RelativePath": "api/Contas/DeleteConta",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "next_world_api.Controllers.ContasController",
     "Method": "GetAll",
     "RelativePath": "api/Contas/ListAllContas",
     "HttpMethod": "GET",
@@ -10,24 +42,56 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "next_world_api.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "ContainingType": "next_world_api.Controllers.ContasController",
+    "Method": "GetById",
+    "RelativePath": "api/Contas/ListContaById",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[next_world_api.WeatherForecast, next-world-api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "next_world_api.Controllers.ContasController",
+    "Method": "login",
+    "RelativePath": "api/Contas/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "next_world_api.Model.Contas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "next_world_api.Controllers.ContasController",
+    "Method": "UpdateConta",
+    "RelativePath": "api/Contas/UpdateConta",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "conta",
+        "Type": "next_world_api.Model.Contas",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

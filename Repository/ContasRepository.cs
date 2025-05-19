@@ -41,6 +41,9 @@ namespace next_world_api.Repository
                 return false;
 
             contaExistente.nome = atualizarConta.nome;
+            contaExistente.email = atualizarConta.email;
+            contaExistente.senha = atualizarConta.senha;
+            contaExistente.acesso = atualizarConta.acesso;
 
             _context.Contas.Update(contaExistente);
             await _context.SaveChangesAsync();
