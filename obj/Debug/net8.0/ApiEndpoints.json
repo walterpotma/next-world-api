@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "next_world_api.Controllers.ContasController",
+    "Method": "GetAll",
+    "RelativePath": "api/Contas/ListAllContas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "next_world_api.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

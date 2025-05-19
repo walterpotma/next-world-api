@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("next-world-api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e479f6627babdd18c7273fef75695385c327c8d0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b066d0f1322d1913f999d69eb2eae2995cc9d65")]
 [assembly: System.Reflection.AssemblyProductAttribute("next-world-api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("next-world-api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
