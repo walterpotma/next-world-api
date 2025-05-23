@@ -16,9 +16,23 @@ namespace next_world_api
             var builder = WebApplication.CreateBuilder(args);
 
             builder.Services.AddDbContext<ComicsContext>(options =>
-                options.UseNpgsql(builder.Configuration.GetConnectionString("supabase")));
+                options.UseNpgsql(builder.Configuration.GetConnectionString("develop")));
 
+            builder.Services.AddScoped<ICapituloRepository, CapituloRepository>();
             builder.Services.AddScoped<IContasRepository, ContasRepository>();
+            builder.Services.AddScoped<IHqRepository, HqRepository>();
+            builder.Services.AddScoped<IPaginaRepository, PaginaRepository>();
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll",
+                    policy =>
+                    {
+                        policy.AllowAnyOrigin()
+                            .AllowAnyMethod()
+                            .AllowAnyHeader();
+                    });
+            });
 
             var key = Encoding.ASCII.GetBytes(next_world_api.Key.Secret);
             builder.Services.AddAuthentication(x =>
@@ -54,6 +68,7 @@ namespace next_world_api
 
             app.UseAuthorization();
 
+            app.UseCors("AllowAll");
 
             app.MapControllers();
 
