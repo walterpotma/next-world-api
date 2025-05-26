@@ -33,6 +33,22 @@ namespace next_world_api.Controllers
         }
 
         [HttpGet]
+        [Route("ListViewCaps")]
+        public async Task<IActionResult> GetViewCaps()
+        {
+            var cap = await _capRepository.GetViewCaps();
+            return Ok(cap);
+        }
+
+        [HttpGet]
+        [Route("ListTopCaps")]
+        public async Task<IActionResult> GetTopCaps()
+        {
+            var cap = await _capRepository.GetTopCaps();
+            return Ok(cap);
+        }
+
+        [HttpGet]
         [Route("ListCapById")]
         public async Task<IActionResult> GetById(int id)
         {
