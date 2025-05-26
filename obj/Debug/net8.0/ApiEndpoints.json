@@ -84,6 +84,26 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "next_world_api.Controllers.CapitulosController",
+    "Method": "GetTopCaps",
+    "RelativePath": "api/Capitulos/ListTopCaps",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "next_world_api.Controllers.CapitulosController",
+    "Method": "GetViewCaps",
+    "RelativePath": "api/Capitulos/ListViewCaps",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "next_world_api.Controllers.ContasController",
     "Method": "AddConta",
     "RelativePath": "api/Contas/AddConta",

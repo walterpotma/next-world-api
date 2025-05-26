@@ -27,11 +27,40 @@ namespace next_world_api.Repository
                 .ToListAsync();
         }
 
+        public async Task<List<Capitulos>> GetViewCaps()
+        {
+            return await _context.Caps
+                .OrderByDescending(c => c.views)
+                .Take(5)
+                .ToListAsync();
+        }
+
+        public async Task<List<Capitulos>> GetTopCaps()
+        {
+            return await _context.Caps
+                .OrderByDescending(c => c.nota)
+                .Take(10)
+                .ToListAsync();
+        }
+
 
         public async Task<Capitulos> GetCapById(int id)
         {
-            return await _context.Caps.FirstOrDefaultAsync(x => x.id == id);
+            var cap = await _context.Caps.FirstOrDefaultAsync(x => x.id == id);
+
+            if (cap == null)
+            {
+                return null;
+            }
+
+            cap.views += 1;
+
+            _context.Caps.Update(cap);
+            await _context.SaveChangesAsync();
+
+            return cap;
         }
+
 
         public async Task<List<Capitulos>> GetCapByIdHq(int hq_id)
         {

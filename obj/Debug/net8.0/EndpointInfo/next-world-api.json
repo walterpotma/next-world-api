@@ -29,6 +29,30 @@
         }
       }
     },
+    "/api/Capitulos/ListViewCaps": {
+      "get": {
+        "tags": [
+          "Capitulos"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Capitulos/ListTopCaps": {
+      "get": {
+        "tags": [
+          "Capitulos"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Capitulos/ListCapById": {
       "get": {
         "tags": [
