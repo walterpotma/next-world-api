@@ -64,7 +64,10 @@ namespace next_world_api.Repository
 
         public async Task<List<Capitulos>> GetCapByIdHq(int hq_id)
         {
-            return await _context.Caps.Where(x => x.hq_id == hq_id).ToListAsync();
+            return await _context.Caps
+                .Where(x => x.hq_id == hq_id)
+                .OrderBy(c => c.numero_cap)
+                .ToListAsync();
         }
 
         public void AddCap(Capitulos newCap)

@@ -22,12 +22,6 @@ C:\Users\walte\source\repos\next-world-api\next-world-api\obj\Debug\net8.0\scope
 C:\Users\walte\source\repos\next-world-api\next-world-api\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\walte\source\repos\next-world-api\next-world-api\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\walte\source\repos\next-world-api\next-world-api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\walte\source\repos\next-world-api\next-world-api\obj\Debug\net8.0\staticwebassets\msbuild.next-world-api.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\walte\source\repos\next-world-api\next-world-api\obj\Debug\net8.0\staticwebassets\msbuild.next-world-api.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\walte\source\repos\next-world-api\next-world-api\obj\Debug\net8.0\staticwebassets\msbuild.build.next-world-api.props
-C:\Users\walte\source\repos\next-world-api\next-world-api\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.next-world-api.props
-C:\Users\walte\source\repos\next-world-api\next-world-api\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.next-world-api.props
-C:\Users\walte\source\repos\next-world-api\next-world-api\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\walte\source\repos\next-world-api\next-world-api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\walte\source\repos\next-world-api\next-world-api\obj\Debug\net8.0\next-wor.8A5419CE.Up2Date
 C:\Users\walte\source\repos\next-world-api\next-world-api\obj\Debug\net8.0\next-world-api.dll
@@ -176,3 +170,4 @@ C:\Users\walte\source\repos\next-world-api\next-world-api\bin\Debug\net8.0\runti
 C:\Users\walte\source\repos\next-world-api\next-world-api\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 C:\Users\walte\source\repos\next-world-api\next-world-api\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\walte\source\repos\next-world-api\next-world-api\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\walte\source\repos\next-world-api\next-world-api\obj\Debug\net8.0\staticwebassets.build.json.cache
